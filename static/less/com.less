@@ -1,0 +1,449 @@
+@basecolor:#ff7300;
+@baseshencolor:#ff5d0f;
+@basehui:#eee;
+@basexzhui:#cecece;
+@basefontsize:16px;
+@basewidth:1200px;
+@ttfontsize:20px;
+@basecolorqianhui:#fdfdfd;
+body{
+	font-family:"Microsoft Yahei", Arial;
+	text-align:center;
+	margin:0;
+	padding:0;
+	user-select:none;
+}
+a{
+	text-decoration:none;
+}
+.topnav{
+	width:100%;
+	height:100px;
+	line-height:100px;
+	border-bottom:1px solid #f5f5f5;
+	background:#fff;
+	.topnavson{
+		width:@basewidth;
+		height:100%;
+		margin:0 auto;
+		.logo{
+			width:30%;
+			height:100%;
+			float:left;
+		}
+		.buttoncss{
+			width:150px;
+			height:45px;
+			line-height:45px;
+			background:@basecolor;
+			float:right;
+			border-radius:5px;
+			color:#fff;
+			margin:26px;
+		}
+	}
+}
+.nav{
+	width:100%;
+	height:auto;
+	background:@basecolor;
+	.navson{
+		width:@basewidth;
+		height:45px;
+		line-height:45px;
+		margin:0 auto;
+		a{
+			color:#fff;
+			text-align:center;
+			display:block;
+			width:10%;
+			height:100%;
+			float:left;
+			&:nth-child(1){
+				background:@baseshencolor;
+			};
+		}
+	}
+}
+.banner{
+	width:100%;
+	height:300px;
+	.swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination-bullet-active{
+    	background:@basecolor;
+    }
+}
+
+.tonglan{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	.tonglanson{
+		width:@basewidth;
+		height:auto;
+		overflow:hidden;
+		margin:0 auto;
+	}
+}
+
+.jrtj{
+	width:15%;
+	height:150px;
+	margin:20px auto;
+	background:url("../images/tj.png") no-repeat left center;
+	float:left;
+	background-size:100% auto;
+}
+.jrtjdiv{
+	width:85%;
+	height:150px;
+	margin:20px auto;
+	background:@basecolorqianhui;
+	float:left;
+	display:block;
+	background-size:100% auto;
+}
+
+ .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin: 0px auto;
+    	position: relative;
+	    overflow: hidden;
+	    z-index: 1;
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination-bullet-active{
+    	background:@basecolor;
+    }
+ }
+
+ .pinpqu{
+ 	width:19.9%;
+ 	height:100px;
+ 	float:left;
+ 	box-sizing:border-box;
+ 	border-right:1px solid @basehui;
+ 	&:nth-child(5n){
+ 		border-right:0;
+ 	}
+ }
+ .addBorbh{
+ 	border-bottom:1px solid @basehui;
+ }
+.pinpqutt{
+	text-align:left;
+	color:@basecolor;
+	font-size:@ttfontsize;
+	margin:10px auto;
+}
+.changjiajhTJtt{
+	text-align:left;
+	height:35px;
+	line-height:35px;
+	color:@basecolor;
+	font-size:@ttfontsize;
+}
+.changjiajhTJ{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	.left{
+		width:24%;
+		height:auto;
+		overflow:hidden;
+		margin:10px auto;
+		float:left;
+		border:1px solid #eee;
+		a{
+			width:100%;
+			height:50px;
+			line-height:50px;
+			display:block;
+			cursor:pointer;
+			text-align:left;
+			text-indent:20px;
+			border-bottom:1px solid #ededed;
+			span{
+				color:#ccc;
+				font-size:12px;
+				padding-left:5px;
+			}
+			&.addStl{
+				background:@basecolor;
+				color:#fff;
+				font-size:18px;
+			}
+			&:nth-last-child(1){
+				border-bottom:0;
+			};
+		}
+	}
+	.right{
+		width:75%;
+		height:auto;
+		overflow:hidden;
+		float:right;
+		.sontab{
+			width:100%;
+			height:auto;
+			.sonleft{
+				width:75%;
+				height:auto;
+				float:left;
+				.chpdiv{
+					width:30%;
+					height:auto;
+					float:left;
+					margin:10px 9px;
+					.imgdivs{
+						width:100%;
+						height:120px;
+						img{
+							object-fit:contain;
+							object-position:center;
+							border:1px solid #eee;
+							width:100%;
+							height:100%;
+						}
+					}
+					span{
+						color:#333;
+						padding:10px 0;
+						width:100%;
+						height:auto;
+						display:block;
+						font-size:12px;
+						text-align:center;
+					}
+				}
+			}
+			.sonright{
+				width:25%;
+				height:auto;
+				float:right;
+				.imgcontain{
+					width:100%;
+					height:100px;
+					margin:10px auto;
+					img{
+					 	object-fit:contain;
+						object-position:center;
+						border:1px solid #eee;
+						width:99%;
+						height:100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.newsdiv{
+	width:@basewidth;
+	height:auto;
+	margin:0 auto;
+	overflow:hidden;
+	.ttils{
+		width:100%;
+		height:45px;
+		line-height:45px;
+		text-align:left;
+		text-indent:10px;
+		background:@basecolorqianhui;
+		font-size:@ttfontsize;
+		border-bottom:1px solid #fcfcfc;
+		a{
+			float:right;
+			font-size:12px;
+			padding-right:10px;
+		}
+	}
+	.newsleft{
+		width:64%;
+		height:auto;
+		overflow:hidden;
+		float:left;
+		.forthdiv{
+			width:50%;
+			height:120px;
+			float:left;
+			overflow:hidden;
+			margin:10px auto;
+			.imgcon{
+				width:40%;
+				height:120px;
+				float:left;
+				img{
+					width:100%;
+					height:98%;
+					object-fit:contain;
+					object-position:center;
+					border:1px solid #eee;
+				}
+			}
+			.wencon{
+				width:55%;
+				height:100%;
+				padding-left:4%;
+				overflow:hidden;
+				float:right;
+				text-align:left;
+				.tt{
+					width:90%;
+					height:80%;
+					line-height:40px;
+					font-size:@ttfontsize;
+					color:#333;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				.xtt{
+					width:90%;
+					height:20%;
+					line-height:20px;
+					font-size:12px;
+					color:@basexzhui;
+				}
+			}
+		}
+	}
+	.newsright{
+		width:35%;
+		height:auto;
+		overflow:hidden;
+		float:right;
+	}
+}
+
+.listdiv{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	clear:both;
+	li{
+		width:100%;
+		height:35px;
+		line-height:35px;
+		list-style:none;
+		border-bottom:1px solid @basecolorqianhui;
+		text-align:left;
+		overflow:hidden;
+		margin:5px auto;
+		text-indent:10px;
+		padding:0;
+		clear:both;
+		&:hover{
+			background:@basecolorqianhui;
+		}
+		.chaolian{
+			display:block;
+			width:100%;
+			height:100%;
+		    float:left;
+			clear:both;
+			color:#666;
+			.wen{
+				width:80%;
+				height:100%;
+				float:left;
+				display:block;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.liang{
+				width:19%;
+				height:100%;
+				float:right;
+				display:block;
+				padding-right:1%;
+				color:@basexzhui;
+				text-align:right;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}
+
+.youqinglijie{
+	width:@basewidth;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+	.yqtt{
+		width:100%;
+		height:40px;
+		line-height:40px;
+		color:#666;
+		font-size:@ttfontsize;
+		text-align:left;
+		text-indent:10px;
+		border-bottom:1px solid @basecolorqianhui;
+	}
+	.yqdiv{
+		width:100%;
+		height:auto;
+		.yqson{
+			width:12.3%;
+			height:60px;
+			overflow:hidden;
+			float:left;
+			margin:.1%;
+			img{
+			    width:100%;
+			    height:auto;
+			    object-fit:contain;
+				object-position:center;
+			}
+		}
+	}
+}
