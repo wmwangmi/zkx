@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect-php');
 var browserSync = require('browser-sync').create();
-// var phpMinify = require('gulp-php-minify');
+   var phpMinify = require('gulp-php-minify');
 // var phpMinify = require('@aquafadas/gulp-php-minify');
 var htmlMinify = require('gulp-htmlmin');
 var postcss = require('gulp-postcss'); 
@@ -138,18 +138,40 @@ gulp.task('default',['commontask'], function() {
 
 gulp.task('commontask',['clean','images'], function() {
 	  // del(['dist']);
+	  
+//	    1.collapseWhitespace:从字面意思应该可以看出来，清除空格，压缩html，这一条比较重要，作用比较大，引起的改变压缩量也特别大；
+//		2.collapseBooleanAttributes:省略布尔属性的值，比如：<input checked="checked"/>,那么设置这个属性后，就会变成 <input checked/>;
+//		3.removeComments:清除html中注释的部分，我们应该减少html页面中的注释。
+//		4.removeEmptyAttributes:清除所有的空属性，
+//		5.removeSciptTypeAttributes:清除所有script标签中的type="text/javascript"属性。
+//		6.removeStyleLinkTypeAttributes:清楚所有Link标签上的type属性。
+//		7.minifyJS:压缩html中的javascript代码。
+//		8.minifyCSS:压缩html中的css代码。
+
+	  var options = {
+						collapseWhitespace:true,
+						collapseBooleanAttributes:true,
+						removeComments:true,
+						removeEmptyAttributes:true,
+						removeScriptTypeAttributes:true,
+						removeStyleLinkTypeAttributes:true,
+						minifyJS:true,
+						minifyCSS:true
+					};
 	  gulp.src(['views/*.html'])
-	  .pipe(htmlMinify())
+	  .pipe(htmlMinify(options))
 	  .pipe(gulp.dest('dist/views'));
 
 	  gulp.src(['*.html'])
-	  .pipe(htmlMinify())
+	  .pipe(htmlMinify(options))
 	  .pipe(gulp.dest('dist'));
 
 	  gulp.src('views/*.php')
+	  .pipe(phpMinify())
 	  .pipe(gulp.dest('dist/views'));
 
 	  gulp.src('*.php')
+	  .pipe(phpMinify())
 	  .pipe(gulp.dest('dist'));
 
 	   
